@@ -327,6 +327,11 @@ Set current print page number, overriding Musicxml's settings. The extra choices
 
 Other tags and properties can be marked using context menu directly on braille objects. Transcribers can also edit the score without using the above insert and context functions, but the result input will be marked as "other" in BMML, and can't be automatically reformatted correctly. They should be manually formatted.
 
+Display images
+This menu is for extracting pictures contained in compressed Musicxml files (.mxl), which may be cover page images or special music symbols not being able to enter in notation programs. The listbox describes the details of every image file as this:
+filename, part number, staff number, and bar number.
+Press View to read the image on screen, and press OK to bring the cursor to the location for transcribers to enter appropriate braille symbols.
+
 Transpose
 This dialog will handle score/parts transposition. See corresponding chapter for details.
 
@@ -468,7 +473,7 @@ Part names and abbreviations will be automatically transcribed into braille, exc
 All line breaks in the Musicxml part field will be shown as \n, and discarded in braille version. Such kind of part names must be manually edited.
 
 Print part list
-List all original items in <score-partlist> of Musicxml.
+List all original items in <score-partlist> of Musicxml, plus part names caused by any instrument changes during the music.
 Items in this extensive table view can be navigated using arrow keys, selected using shift+arrow, edited by pressing F2, and deleted using Del key. Its format is managed as follows:
 group name, group abbreviation, part ID, part name, and part abbreviation.
 Any item will be left empty when no one is found.
@@ -631,6 +636,10 @@ Ignore (ctrl+)
 Mark such item as "other" quickly.
 
 In the two xml windows, you can't do any copy/paste functions, but can still enter and delete, for example, correcting or deleting garbage codes (Finale often exports Chinese as garbage codes), and fix mismatched element entry. This way, copyrighted print materials will not be duplicated by end-users (unless he/she has enough time and patience to re-type thousands or millions of xml lines!).
+
+For compressed Musicxml files (.mxl), some pieces may contain pictures for either cover pages or unusual music symbols or others. When images are available, there are two ways to access them visually on the screen:
+1. Press Ctrl+I in the Musicxml window. If BrailleOrch finds any images, a list will appear, describing filename, part, staff and bar numbers. Choose one and press enter or OK, the picture can display on the screen, and the cursor will locate on the image link code.
+2. On a line of image source link, press Ctrl+Alt+I to view this image.
 
 ========================================
 
